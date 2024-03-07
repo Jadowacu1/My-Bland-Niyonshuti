@@ -76,7 +76,7 @@ nav .icon-burger .line{
     height: 50px;
     background-color: #74B3CE;
     border-radius: 10px;
-    color: black;
+    color: white;
     font-size: large;
 }
 .footer{
@@ -88,12 +88,13 @@ nav .icon-burger .line{
 }
 .pic{
     margin: 0;
-    width: 40%;
+    width: 100%;
     height: auto;
     margin-top: 90px;
+    margin-right: 10%;
 }
 .intro{
-    width: 60%;
+    width: 100%;
     height: auto;
     font-size: 1em;
     color: white;
@@ -167,4 +168,47 @@ nav .icon-burger .line{
     }
     
 } 
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    nav .links a{
+        display: block;
+        padding: 1em;
+        font-size: 20px;
+        
+        color: #fff;
+        text-decoration: none;
+    }
+    .footer{
+        height: 500px;
+        margin-top: 408px;
+
+    }
+    .pic{
+        width: 100%;
+        height: 300px;
+    }
+    .pic img{
+        width: 90%;
+        height: auto;
+        margin-right: 5%;
+        /* object-fit: cover; */
+        margin-top: 200px;
+    }
+    .intro{
+        width: 100%;
+        height: 300px;
+        font-size: 2rem;
+        margin-right: 5%;
+    }
+    .intro h1{
+        font-size: 40px;
+    }
+    .hire{
+        width: 70%;
+        height: 70px;
+        background-color: #74B3CE;
+        border-radius: 10px;
+        color: white;
+        font-size: 30px;
+    }
+}
 
