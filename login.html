@@ -3,15 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/login.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto"
     />
-    
-
-<link rel ="stylesheet" href="K:\fontawesome\fontawesome-free-5.14.0-web"\fontawesome-free-5.14.0-web\css\all.min.css">
 
     <link
       rel="stylesheet"
@@ -27,12 +25,12 @@
       <input id="nav-toggle" type="checkbox" />
       <div class="logo">Jado <strong>Forge</strong></div>
       <ul class="links">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
       </ul>
       <label for="nav-toggle" class="icon-burger">
         <div class="line"></div>
@@ -40,20 +38,43 @@
         <div class="line"></div>
       </label>
     </nav>
-    <section class="box">
-      <div class="pic"><img src="./images/pic.png" alt="" /></div>
-      <div class="intro">
+    <section class="login-box">
+      <div class="signup-opt">
         <center>
-          <label>
-            <h1>Welcome to Jado<strong>Forge</strong></h1>
-            I'm Niyonshuti Jean De Dieu, a Full-Stack Developer<br />
-            committed to turning ideas into powerful digital solutions.<br />
-            Here at JadoForge, Your will be able to know more about me.<br /><br />
-            Fell free to Write To me for any Software development support<br />
-            It's an Important thing to have you here. </label
-          ><br /><br />
-          <button class="hire">Hire Me</button>
+          <h1>New Here</h1>
+          <p>
+            Sign up and discover<br />
+            a great amount of opportunities
+          </p>
+          <input type="submit" value="Sign Up" /><br />
         </center>
+      </div>
+      <div>
+        <form>
+          <h1>Login Here</h1>
+          <div>
+            <label>Email</label>
+          </div>
+          <div>
+            <input type="text" id="email" required />
+          </div>
+          <div>
+            <label>Password</label>
+          </div>
+          <div>
+            <input type="password" id="password" required />
+          </div>
+          <br />
+          <center>
+            <div>
+              <input type="submit" value="Login" />
+            </div>
+          </center>
+          <br /><br />
+          <div>
+            <label>Login With Social Media Account</label>
+          </div>
+        </form>
       </div>
     </section>
     <footer class="footer">
@@ -62,24 +83,17 @@
         <div><h3>Jean De Dieu</h3></div>
         <br /><br />
         <div class="icons">
-          <span class="square-icone"></span>
           <a href="https://github.com/Jadowacu1" target="_blank"
             ><i class="fa-brands fa-github"></i
-          ></a></span>
-          <span class="square-icone">
+          ></a>
           <a href=""><i class="fa-brands fa-x"></i></a>
-        </span>
-          <span class="square-icone"> 
-          <a href="https://www.linkedin.com/in/niyonshuti-jean-de-dieu-861126295/"
+          <a
+            href="https://www.linkedin.com/in/niyonshuti-jean-de-dieu-861126295/"
             target="_blank"
             ><i class="fa-brands fa-linkedin"></i
-          ></a></span>
-          <span class="square-icone">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-          </span>
-          <span class="square-icone">
-          <a href=""><i class="fab fa-instagram-square"></i></a>
-         </span>
+          ></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
         </div>
         <br />
         <div class="copyright">

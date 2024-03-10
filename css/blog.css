@@ -1,0 +1,47 @@
+.blogs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    color: white;
+    margin-top: 100px;
+}
+/* .blog1{
+   width: 50%;
+   height: 200px;  
+   
+} */
+.blog1 img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.blog2 img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.blog3 img{
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+}
+.read{
+    width: 30%;
+    height: 30px;
+    border-radius: 12px;
+}
+h6{
+    color: blue;
+}
+@media screen and (max-width: 768px){
+        .blogs {
+            grid-template-columns: 1fr;
+            grid-auto-flow: row; 
+            margin-left: 5%;
+          }
+    .read{
+        width: 80%;
+        height: 30px;
+        border-radius: 12px;
+    }
+}
