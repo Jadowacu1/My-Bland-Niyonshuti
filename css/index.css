@@ -9,8 +9,7 @@ body {
     
 }
 nav{
-    position: fixed;
-    z-index: 10;
+    position:absolute;
     left: 0;
     right: 0;
     font-family: 'Montserrat',sans-serif;
@@ -72,7 +71,7 @@ nav .icon-burger .line{
     transition: all .3s ease-in-out;
 }
 .hire{
-    width: 30%;
+    width: 40%;
     height: 50px;
     background-color: #74B3CE;
     border-radius: 10px;
@@ -82,6 +81,7 @@ nav .icon-burger .line{
 .footer{
     color:white;
 }
+
 .box{
     display: flex;
     flex-direction: row;
@@ -96,11 +96,15 @@ nav .icon-burger .line{
 .intro{
     width: 100%;
     height: auto;
+    font-family: Atomic age;
     font-size: 1em;
     color: white;
     margin-top: 230px;
 }
 @media screen and (max-width: 768px){
+    nav{
+        position: absolute;
+    }
     nav .logo{
         float: none;
         width: auto;
@@ -149,7 +153,7 @@ nav .icon-burger .line{
         margin: 0;
         width: 100%;
         height: auto;
-        /* margin-top: 100px; */
+        margin-top: 60px;
     }
     .intro{
         width: 100%;

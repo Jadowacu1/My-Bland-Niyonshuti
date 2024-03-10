@@ -37,6 +37,17 @@
    text-align: center;
    margin-top: 10px;
 }
+.square-icon {
+   display: inline-block;
+   width: 40px; /* Adjust as needed */
+   height: 40px; /* Adjust as needed */
+   border: 2px solid black; /* Add a border */
+   border-radius: 5px; /* Optional: Add some border radius for rounded corners */
+   text-align: center; /* Optional: Center the icon */
+   line-height: 40px; /* Optional: Center the icon vertically */
+   margin-right: 10px; /* Optional: Adjust spacing between icons */
+ }
+ 
 @media screen and (max-width: 768px){
      footer{
     margin: 0;
@@ -44,6 +55,11 @@
     background-color: #071925;
     font-family: 'Roboto', sans-serif;
     padding: 80px 40px 30px;  
+   }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+   .footer{
+      height: 200px;
    }
 }
 
