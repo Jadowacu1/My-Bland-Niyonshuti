@@ -75,6 +75,7 @@ nav .icon-burger .line{
     height: 50px;
     background-color: #74B3CE;
     border-radius: 10px;
+    border: none;
     color: white;
     font-size: large;
 }
