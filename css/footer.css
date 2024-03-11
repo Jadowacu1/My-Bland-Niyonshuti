@@ -26,8 +26,7 @@
    padding: 10px;
    background-color: white;
    margin: 10px;
-   border-radius: 50%
-}
+  }
 .icons  a i{
    font-size: 1em;
    color: black;
@@ -37,16 +36,14 @@
    text-align: center;
    margin-top: 10px;
 }
-.square-icon {
-   display: inline-block;
-   width: 40px; /* Adjust as needed */
-   height: 40px; /* Adjust as needed */
-   border: 2px solid black; /* Add a border */
-   border-radius: 5px; /* Optional: Add some border radius for rounded corners */
-   text-align: center; /* Optional: Center the icon */
-   line-height: 40px; /* Optional: Center the icon vertically */
-   margin-right: 10px; /* Optional: Adjust spacing between icons */
- }
+.icon {
+   width: 30px; /* Adjust as needed */
+   height: 30px; /* Adjust as needed */
+   background-color: #fff; /* Adjust as needed */
+   /* Remove rounded borders */
+   border-radius: 0; 
+}
+
  
 @media screen and (max-width: 768px){
      footer{
