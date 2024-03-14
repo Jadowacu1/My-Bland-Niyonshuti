@@ -1,66 +1,74 @@
-let inputs = document.querySelectorAll('input');
-const patterns = {
-    email : /^([a-z\d\.]+)@([a-z\d]+)\.([a-z]){2,8}(\.[a-z]{2,8})?$/,
-    lname : /^[a-z]{3,20}/i,
-    fname : /^[a-z]{3,20}/i,
-    phone : /^(072|078|079|073)[0-9]{7}$/
-}
-let text ;
-let isValid = 0;
-function checking(field,pattern){
-    let errorMessage = field.name + "Message";
-    if(pattern.test(field.value)){
-       field.className = "valid";
-       document.getElementById(errorMessage).innerHTML = "";
-        isValid = true;
+const form = document.getElementById('form');
+form.addEventListener('submit', function(Event){
+    Event.preventDefault();
+    if(validator()){
+        form.submit();
+    }
+});
+ function validator(){
+    let email = document.getElementById('email').value;
+    let lname = document.getElementById('lname').value;
+    let fname = document.getElementById('fname').value;
+    let phone = document.getElementById('phone').value;
+    let txt = document.getElementById('txt').value;
+    console.log(txt);
+    if(!fnameValidator(fname)){
+        document.getElementById('fnameMessage').innerHTML = "Name Must be 3 and above characters in long";
+        return false;
     }
     else{
-        isValid = false;
-        field.className = "invalid";
-        switch(field.name){
-            case "email":
-            document.getElementById(errorMessage).innerHTML = "Email must be a valid address,e.g. me@mydomain.com";
-            break;
-            case "fname": 
-            document.getElementById(errorMessage).innerHTML = "Name Must be 4 to 8 in long";
-            break;
-            case "lname": 
-            document.getElementById(errorMessage).innerHTML = "Name Must be 4 to 8 in long";
-            break;
-            case "phone": 
-            document.getElementById(errorMessage).innerHTML = "enter correct phone number eg: 078/072/073/079 + other seven numbers";
-            break; 
-        }
-        
+        document.getElementById('fnameMessage').innerHTML = "";
     }
-}
-inputs.forEach(Element => {
-    Element.addEventListener('keyup',(e) => {
-        checking(e.target,patterns[e.target.attributes.name.value]);
-    });
-});
-document.getElementById('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const regex = new RegExp(/^[^\d\s][\s\S]{19,}$/);
-    if(isValid){
-        const text = document.getElementById('text').value.trim()
-        if(text !=='' && text.length >=20){
-            if(regex.test(text)){
-            this.submit();
-            }
-            else{
-                document.getElementById("textMessage").innerHTML = "Message should start with letters";
-            }
-
-        }
-        else{
-            document.getElementById("textMessage").innerHTML = "Please provide a clear message with at least 20 characters.";  
-        }
-     
-     }
+    if(!lnameValidator(lname)){
+        document.getElementById('lnameMessage').innerHTML = "Name Must be 3 and above characters in long";
+        return false;
+    }
     else{
-        return;
+        document.getElementById('lnameMessage').innerHTML = "";
+    }
+    if(!emailValidator(email)){
+        document.getElementById('emailMessage').innerHTML = "Please the correct email e.g example@gmail.com"
+        return false;
+    }
+    else{
+        document.getElementById('emailMessage').innerHTML = "";
+    }
+    
+    if(!phoneValidator(phone)){
+        document.getElementById('phoneMessage').innerHTML = "number must be of 078/079/073/072 + 7 numbers";
+        return false;
+    }
+    else{
+        document.getElementById('phoneMessage').innerHTML = "";
     }
 
-});
+    if(!txtValidator(txt)){
+        document.getElementById('textMessage').innerHTML = "Provide a clear message with above 20 character"; 
+        return false;
+    }
+    else{
+        document.getElementById('textMessage').innerHTML = "";
+    }
+    return true;
+ }
+ function emailValidator(email){
+    const pattern = /^([a-z\d\.]+)@([a-z\d]+)\.([a-z]){2,8}(\.[a-z]{2,8})?$/;
+    return pattern.test(email);
+ }
+ function fnameValidator(fname){
+    const pattern = /^[a-z]{3,20}$/i;
+    return pattern.test(fname);
+}
+function lnameValidator(lname){
+    const pattern = /^[a-z]{3,20}$/i;
+    return pattern.test(lname);
+}
+function phoneValidator(phone){
+    pattern = /^(072|078|079|073)[0-9]{7}$/;
+    return pattern.test(phone);
+}
+function txtValidator(txt){
+    const pattern = /^[a-z]{20,}$/i;
+    return pattern.test(txt);
+}
 
