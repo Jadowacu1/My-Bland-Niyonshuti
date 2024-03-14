@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/signup.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto"
@@ -48,27 +48,29 @@
         </center>
       </div>
       <div>
-        <form>
+        <form id="form">
           <h1>Create Account</h1>
           <div>
             <label>Email</label>
           </div>
           <div>
-            <input type="text" id="email" required />
+            <input type="text" name="email" required />
+            <p id="emailMessage"></p>
           </div>
           <div>
             <label>Create Password</label>
           </div>
           <div>
-            <input type="password" id="password" required />
+            <input type="password" name="password" required />
+            <p id="passwordMessage"></p>
           </div>
           <div>
-            <label>Cconfirm Password</label>
+            <label>Confirm Password</label>
           </div>
           <div>
-            <input type="password" id="password" required />
+            <input type="password" name="password1" required />
+            <p id="password1Message"></p>
           </div>
-          <br />
           <center>
             <div>
               <input type="submit" value="SignUp" />
@@ -94,7 +96,9 @@
             ><i class="fa-brands fa-linkedin"></i
           ></a>
           <a href=""><i class="fa-brands fa-facebook"></i></a>
-          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.instagram.com/jadoforge/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
         </div>
         <br />
         <div class="copyright">
@@ -102,5 +106,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/signup.js"></script>
   </body>
 </html>
