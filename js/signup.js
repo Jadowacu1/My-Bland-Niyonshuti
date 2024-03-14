@@ -74,4 +74,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
     }
 
 });
+document.getElementById('login').addEventListener('submit', (e) => {
+    e.preventDefault();
+})
 
