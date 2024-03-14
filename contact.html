@@ -59,23 +59,23 @@
       </div>
       <br />
       <div class="form">
-        <form id="form" method="POST">
+        <form id="form">
         <div class="row">
         
-          <input type="text" name="fname" placeholder="First Name" required/>
+          <input type="text" id="fname" placeholder="First Name" required/>
           <p id="fnameMessage"></p>
-          <input type="text" name="lname" placeholder="Last Name" required/>
+          <input type="text" id="lname" placeholder="Last Name" required/>
           <p id="lnameMessage"></p>
         </div>
         <div class="row">
-          <input type="text" name="email" placeholder="Email Address" required />
+          <input type="text" id="email" placeholder="Email Address" required />
           <p id="emailMessage"></p>
-          <input type="number" name="phone" placeholder="Phone Number" required/>
+          <input type="number" id="phone" placeholder="Phone Number" required/>
           <p id="phoneMessage"></p>
         </div>
        <br>
         <div class="column">
-          <textarea id="text" placeholder="Message Description" required></textarea><br />
+          <textarea id="txt" placeholder="Message Description" required></textarea><br />
           <p id="textMessage"></p>
           <input type="submit" id="send" value="Send Message" />
           </div>

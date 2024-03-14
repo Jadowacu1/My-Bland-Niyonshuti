@@ -48,6 +48,10 @@
     border: 2px solid red;
     
 }    
+.login-box form p{
+    font-size:xx-small;
+    color: orange;
+}
 @media screen and (max-width: 768px){
     .login-box{
         /* display: grid;
