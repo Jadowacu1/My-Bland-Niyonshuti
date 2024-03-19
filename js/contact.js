@@ -2,7 +2,7 @@ const form = document.getElementById('form');
 form.addEventListener('submit', function(Event){
     Event.preventDefault();
     if(validator()){
-        form.submit();
+        form.reset();
     }
 });
  function validator(){
@@ -49,10 +49,12 @@ form.addEventListener('submit', function(Event){
     else{
         document.getElementById('textMessage').innerHTML = "";
     }
+    dataStoring(email, lname,fname,phone,txt);
     return true;
  }
  function emailValidator(email){
     const pattern = /^([a-z\d\.]+)@([a-z\d]+)\.([a-z]){2,8}(\.[a-z]{2,8})?$/;
+    
     return pattern.test(email);
  }
  function fnameValidator(fname){
@@ -60,7 +62,7 @@ form.addEventListener('submit', function(Event){
     return pattern.test(fname);
 }
 function lnameValidator(lname){
-    const pattern = /^[a-z]{3,20}$/i;
+    const pattern = /^[a-z\s]{3,20}$/i;
     return pattern.test(lname);
 }
 function phoneValidator(phone){
@@ -68,7 +70,23 @@ function phoneValidator(phone){
     return pattern.test(phone);
 }
 function txtValidator(txt){
-    const pattern = /^[a-z]{20,}$/i;
-    return pattern.test(txt);
-}
-
+     pattern = /^(?!.*[^a-z\s0-9,.]).{20,}$/i
+     return pattern.test(txt);
+   }
+   function dataStoring(email, lname,fname,phone,txt) {
+    
+    let userData = JSON.parse(localStorage.getItem("message")) || [];
+    if(userData.includes(email)){
+        return false;
+    }
+    let message = {
+      email: email,
+      phone : phone,
+      lname : lname,
+      fname : fname,
+      message : txt
+    };
+    userData.push(message);
+    localStorage.setItem("message", JSON.stringify(userData));
+    console.log(userData);   
+  }
