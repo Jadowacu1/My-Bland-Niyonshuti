@@ -97,10 +97,10 @@ nav .icon-burger .line{
 .intro{
     width: 100%;
     height: auto;
-    font-family: Atomic age;
+    /* font-family: Atomic age; */
     font-size: 1em;
     color: white;
-    margin-top: 230px;
+    margin-top: 150px;
 }
 @media screen and (max-width: 768px){
     nav{

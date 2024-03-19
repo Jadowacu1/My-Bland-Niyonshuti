@@ -1,17 +1,13 @@
 .blogs{
+    margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     color: white;
     margin-top: 100px;
 }
-/* .blog1{
-   width: 50%;
-   height: 200px;  
-   
-} */
 .blog1 img{
-    width: 100%;
+    width: 70%;
     height: 200px;
     object-fit: cover;
 }
@@ -25,13 +21,33 @@
     height: 200px;
     object-fit: cover;
 }
+.blog1 .show{
+    display: none;
+}
+.blog1 .show-more{
+    display: inline;
+}
+.blog .dots{
+    display: inline;
+}
+.blog1 .dot{
+    display: none;
+}
 .read{
     width: 30%;
     height: 30px;
     border-radius: 12px;
 }
+.blog1 .hide{
+    display: none;
+}
 h6{
     color: blue;
+}
+.blogForm{
+    display: flex;
+    flex-direction: column;
+    color:black;
 }
 @media screen and (max-width: 768px){
         .blogs {
